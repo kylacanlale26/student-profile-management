@@ -1,15 +1,16 @@
+# CREATE
+
 students = []
 
-# CREATE
 def create_student():
     student_name = input("Enter your name: ")
-    student_number = input("Enter your name: ")
+    student_number = int(input("Enter your student number (no dash): "))
     Year_Section = input("Enter your year and section: ")
 
     student = {
-        name: student_name,
-        number: student_number,
-        yearsection: Year_Section
+        "name": student_name,
+        "id": student_number,
+        "year": Year_Section
     }
 
     students.append(student)
@@ -25,6 +26,7 @@ def view_student():
     print(f"\n ------- Student Profile Card -------")
     print(f"Student Name: {student['name']}")
     print(f"Student ID: {student['id']}")
+
 # UPDATE
 
 # DELETE
