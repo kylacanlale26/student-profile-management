@@ -19,7 +19,7 @@ def create_student():
 
 # READ
 def view_student():
-    student_id = int(input("\nTo view the student profile card, please enter the student ID number: "))
+    student_id = input("\nTo view the student profile card, please enter the student ID number: ") 
     student = next((s for s in students if s["id"] == student_id), None)
     if not student:
         print("\nError! Student profile not found within the system.")

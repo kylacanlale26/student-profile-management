@@ -1,44 +1,14 @@
-# student-profile-management
-# student-profile-management
-add, edit, delete, and view profile
+# Student Profile Management System
+Create, Read, Update, and Delete (CRUD) Student Profiles
 
-Student profile management
-CRUD
+## Lacanlale, Kyla G.
+In charge of the 'create student profile' function. Made the student profile management system menu.
 
-Lacanlele
-Create
-Student Name: Stephen Sedrick Basilio
-Student number:
-Year&Section:
+## Basilio, Stephen Sedrick C.
+In charge of the 'read student profile' function. Updated Create, Read, Menu, and README.
 
-Basilio
-Read
-Type "view"
+## Montero, Lovendin Jade D.
+In charge of the 'update student profile' function. Added 'update' to confirm.
 
-Montero
-Update
-type "Edit"
-type "Update" = done
-
-Escoto
-Delete 
-Type "Delete"
-Type which student number to delete 
-type "Confirm" to confirm deletion
-
-if else?
-variable names
-student_name
-student_number
-Year_Section
-
-view
-
-Edit
-Update
-
-Delete
-Confirm
-
-
-
+## Escoto, Febbie Ann C.
+Made the initial README file. In charge of the 'delete student profile' function.
