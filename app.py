@@ -5,28 +5,34 @@ students = []
 def create_student():
     print("\nCreate Student Profile")
     student_name = input("\nEnter your full name: ")
-    student_number = int(input("Enter your student number (no dash): "))
-    Year_Section = input("Enter your year and section (e.g., 1A): ")
+    student_number = input("Enter your student number (no dash): ")
+    year_section = input("Enter your year and section (e.g., 1A): ")
+
+    if any(s["id"]) == student_number for s in students):
+        print("\nError! Student ID already exists within the system.")
+        return
 
     student = {
         "name": student_name,
         "id": student_number,
-        "yearsection": Year_Section
+        "yearsection": year_section
     }
 
     students.append(student)
-    print("\nStudent added successfully!")
+    print("\nStudent profile added successfully!")
 
 # READ
 def view_student():
-    student_id = int(input("\nTo view the student profile card, please enter the student ID number: "))
-    student = next((s for s in students if s["id"] == student_id), None)
+    student_id = input("\nTo view the student profile card, please enter the student ID number: ") 
+    student = next(s for s in students if s["id"] == student_id), None)
     if not student:
-        print("\nError! Student profile not found within the management system.")
+        print("\nError! Student profile not found within the system.")
         return
-    print(f"\n ------- Student Profile Card -------")
+    print("\n ------- Student Profile Card -------")
     print(f"Student Name: {student['name']}")
     print(f"Student ID: {student['id']}")
+    print(f"Year & Section: {student['yearsection']}")
+    print("------------------------------------")
 
 # UPDATE
 def update_student():
@@ -105,7 +111,7 @@ def update_student():
 def student_menu():
     while True:
 
-        print("\nStudent Profile")
+        print("\nStudent Profile Management System")
 
         while True:
             print("\nOptions:")
