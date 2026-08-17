@@ -4,7 +4,7 @@ students = []
 def create_student():
     print("\nCreate Student Profile")
     student_name = input("\nEnter your full name: ")
-    student_number = input("Enter your student number (no dash): ")
+    student_number = int(input("Enter your student number (no dash): "))
     year_section = input("Enter your year and section (e.g., 1A): ")
     if any((s["id"]) == student_number for s in students):
         print("\nError! Student ID already exists within the system.")
@@ -32,13 +32,13 @@ def view_student():
 
 # UPDATE
 def update_student():
-    student_id = int (input("\nEnter the student ID to update: "))
+    student_id = int(input("\nEnter the student ID to update: "))
     for student in students:
         if student["id"] == student_id:
             print("\nStudent Information: ")
             print("\nStudent Name: ", student["name"])
-            print("\nStudent ID: ", student["id"])
-            print("\nYear & Section: ", student["yearsection"])
+            print("Student ID: ", student["id"])
+            print("Year & Section: ", student["yearsection"])
             command = input("\nType 'edit' to edit the student's info: ")
             if command == "edit":
                 while True:
