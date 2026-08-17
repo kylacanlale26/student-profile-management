@@ -73,7 +73,28 @@ def update_student():
     pass
 
 # DELETE
+def delete_student():
+    student_id = int(input("\nTo delete the student information, please enter the student ID number: "))
 
+    student = next((s for s in students if s["id"] == student_id), None)
+
+    if not student:
+        print("\nError! Student profile not found in the system")
+        return
+
+    print("\n ------- Student Profile Card -------")
+    print(f"Student Name: {student['name']}")
+    print(f"Student ID: {student['id']}")
+    print(f"Year & Section: {student['yearsection']}")
+    print("------------------------------------")
+
+    confirm = input("\nType 'delete' to confirm deletion: ")
+
+    if confirm == "delete":
+        students.remove(student)
+        print("\nStudent profile deleted successfully!")
+    else:
+        print("\nCancel")
 
 # MENU
 def student_menu():
@@ -99,6 +120,7 @@ def student_menu():
         elif choice == "3":
             update_student()
         elif choice == "4":
+            delete_student()
             pass
         elif choice == "5":
             print("\nSee you again!")
